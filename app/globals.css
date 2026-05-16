@@ -1,3 +1,48 @@
+@keyframes confetti {
+  0% { transform: translateY(-100px) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(400px) rotateZ(360deg); opacity: 0; }
+}
+
+.confetti {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 2rem;
+  animation: confetti 1.2s cubic-bezier(.6,.1,.4,1) forwards;
+}
+@keyframes confetti-xxl {
+  0% { transform: translateY(-200px) scale(1.5) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(800px) scale(2.5) rotateZ(720deg); opacity: 0; }
+}
+.confetti-xxl {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  pointer-events: none;
+  z-index: 10000;
+  font-size: 4rem;
+  animation: confetti-xxl 2.2s cubic-bezier(.6,.1,.4,1) forwards;
+  filter: drop-shadow(0 0 8px #fff) drop-shadow(0 0 16px #fff7);
+}
+/* --- Word Theme Background --- */
+.word-bg {
+  background:
+    repeating-linear-gradient(0deg, #b3e0ff 0px, #b3e0ff 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, #b3e0ff 0px, #b3e0ff 1px, transparent 1px, transparent 40px),
+    linear-gradient(135deg, #e0f7ff 0%, #81d4fa 100%);
+}
+/* --- Excel Theme Background --- */
+.excel-bg {
+  /* Dégradé vert Excel + quadrillage léger */
+  background:
+    repeating-linear-gradient(0deg, #e2f0d9 0px, #e2f0d9 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, #e2f0d9 0px, #e2f0d9 1px, transparent 1px, transparent 40px),
+    linear-gradient(135deg, #d9ead3 0%, #b6d7a8 100%);
+}
 @import "tailwindcss";
 
 :root {
